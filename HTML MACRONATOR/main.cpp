@@ -112,7 +112,7 @@ int main(int argc, const char * argv[]) {
                 status = 0;
             }
         }
+    }
     std::cout << "Shutting Down!\n";
     return 0;
-    }
 }
