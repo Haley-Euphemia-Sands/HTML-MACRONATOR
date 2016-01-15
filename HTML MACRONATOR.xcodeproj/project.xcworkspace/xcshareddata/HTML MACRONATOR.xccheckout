@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A46EEB8C-59AF-49BD-8CFB-DE8E9647C7DD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5194773FA8065BD54552DEF0E62DEFDEAFD926AD</key>
+		<string>https://github.com/haleyashleypraesent/HTML-MACRONATOR.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HTML MACRONATOR.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5194773FA8065BD54552DEF0E62DEFDEAFD926AD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/haleyashleypraesent/HTML-MACRONATOR.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5194773FA8065BD54552DEF0E62DEFDEAFD926AD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5194773FA8065BD54552DEF0E62DEFDEAFD926AD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HTML%20MACRONATOR</string>
+		</dict>
+	</array>
+</dict>
+</plist>

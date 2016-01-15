@@ -13,15 +13,15 @@ int main(int argc, const char * argv[]) {
     char type[20];
     char extraatr[50];
     char imgext[20];
-    char fin[3];
-    int start, finish, count, status;
-    status = 1;
+    char fin[1];
+    int start, finish, count, status[2];
+    status[1] = 1;
     //if (strcmp(argv[1])==0) {
-    while (status == 1) {
+    while (status[1] == 1) {
         std::cout << "Please enter element you want to generate or enter \"exit\": \n";
         std::cin >> element;
         if (strcmp(element,"exit") == 0 ) {
-            status = 0;
+            status[1] = 0;
         }
         else if (strcmp(element,"a")==0) {
             std::cout << "Enter File extension of the source example \".htm\": \n";
@@ -44,6 +44,45 @@ int main(int argc, const char * argv[]) {
             std::cout << "lhelp – Displays Verbose help\n";
             std::cout << "webp – Preset for webp image only allows for \".webp\" extension.\n";
             std::cout << "webm – Preset for html 5 video.\n";
+            std::cout << "xml – Enter XML mode.\n";
+        }
+        else if (strcmp(element,"xml")==0){
+            status[0]=1;
+            while (status[0] == 1) {
+                std::cout << "What do you want the element to be please type help to check options.\n";
+                std::cin >> extraatr;
+                if (strcmp(extraatr,"help")==0) {
+                    std::cout << "";
+                }
+                else {
+                    std::cout << "What is the atribute?:\n";
+                    std::cin >> type;
+                    std::cout << "What number do you want recursion to start at: \n";
+                    std::cin >> start;
+                    std::cout << "What number do you want to be the final value: \n";
+                    std::cin >> finish;
+                    count = start;
+                    while (count <= finish) {
+                        std::cout << "<" << extraatr << " " << type << "=\"" << count << "\"></" << extraatr << ">\n";
+                        count++;
+                    }
+                }
+                while (status[0] != 0) {
+                    std::cout << "Do you want to exit xml mode y, or n:\n";
+                    std::cin >> fin;
+                    if (strcmp(fin,"y")==0) {
+                        status[0] = 0;
+                    }
+                    else if  (strcmp(fin,"n")==0){
+                        std::cout << "Please continue\n";
+                    }
+                    else {
+                        status[0]=0;
+                        status[1]=0;
+                    }
+            }
+            
+            }
         }
         else if (strcmp(element,"webp")==0) {
             std::cout << "What number do you want recursion to start at: \n";
@@ -82,26 +121,26 @@ int main(int argc, const char * argv[]) {
             std::cout <<"This option is depreciated!\n Shutting down or go back to begining y or n?\n";
             std::cin >> extraatr;
             if (strcmp(extraatr,"y")==0) {
-                status=0;
+                status[1]=0;
             }
             else if (strcmp(extraatr,"n")==0) {
                 
             }
             else {
                 std::cout << "Fatal Error 101: \n No Such Option.\n";
-                status = 0;
+                status[1] = 0;
             }
         }
-        if (status != 0) {
-            std::cout << "Do you want to do anything else?\n";
+        if (status[1] != 0) {
+            std::cout << "Do you want to do anything else y (1), or n (0)?\n";
             std::cin >> fin;
-            if (strcmp(fin,"no")==0) {
-                status = 0;
+            if (strcmp(fin,"n")==0) {
+                status[1] = 0;
             }
             else if (strcmp(fin,"0")==0){
-                status=0;
+                status[1]=0;
             }
-            else if (strcmp(fin,"yes")==0){
+            else if (strcmp(fin,"y")==0){
                 std::cout << "Please continue. \n";
             }
             else if (strcmp(fin,"1")==0){
@@ -109,7 +148,7 @@ int main(int argc, const char * argv[]) {
             }
             else {
                 std::cout << "Fatal Error 101: \n No Such Option.\n";
-                status = 0;
+                status[1] = 0;
             }
         }
     }
