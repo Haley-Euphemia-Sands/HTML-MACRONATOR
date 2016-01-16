@@ -127,7 +127,6 @@ int main(int argc, const char * argv[]) {
                 
             }
             else {
-                std::cout << "Fatal Error 101: \n No Such Option.\n";
                 status[1] = 0;
             }
         }
@@ -147,7 +146,6 @@ int main(int argc, const char * argv[]) {
                 std::cout << "Please continue. \n";
             }
             else {
-                std::cout << "Fatal Error 101: \n No Such Option.\n";
                 status[1] = 0;
             }
         }
