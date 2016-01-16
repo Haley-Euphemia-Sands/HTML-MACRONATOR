@@ -16,7 +16,6 @@ int main(int argc, const char * argv[]) {
     char fin[1];
     int start, finish, count, status[2];
     status[1] = 1;
-    //if (strcmp(argv[1])==0) {
     while (status[1] == 1) {
         std::cout << "Please enter element you want to generate or enter \"exit\": \n";
         std::cin >> element;
