@@ -38,6 +38,7 @@ int main(int argc, const char * argv[]) {
         else if (strcmp(element,"help")==0){
             std::cout << "a – Preset for hyperlink without predefined file extension.\n";
             std::cout << "exit – Switches Status mode to 0 and instigates program termination.\n";
+            std::cout << "h5a – HTML5 Audio, Opus or Vorbis stored in a webm container.\n";
             std::cout << "h5g – HTML5 Animation Image (AKA HTML5 GIF) preset.\n";
             std::cout << "help – Displays help.\n";
             std::cout << "lhelp – Displays Verbose help\n";
@@ -51,10 +52,16 @@ int main(int argc, const char * argv[]) {
                 std::cout << "What do you want the element to be please type help to check options.\n";
                 std::cin >> extraatr;
                 if (strcmp(extraatr,"help")==0) {
-                    std::cout << "";
+                    std::cout << "exit – Exit XML mode.\n";
+                    std::cout << "help – Displays this help.\n";
+                    std::cout << "Any other option added will be treated as an element.\n";
+                }
+                else if (strcmp(extraatr,"exit")==0) {
+                    status[0]=0;
                 }
                 else {
                     std::cout << "What is the atribute?:\n";
+                    std::cout << "(Note this is the name of atribute the actual value will be the recursion)\n";
                     std::cin >> type;
                     std::cout << "What number do you want recursion to start at: \n";
                     std::cin >> start;
@@ -81,6 +88,17 @@ int main(int argc, const char * argv[]) {
                     }
             }
             
+            }
+        }
+        else if (strcmp(element,"h5a")==0) {
+            std::cout << "What number do you want recursion to start at: \n";
+            std::cin >> start;
+            std::cout << "What number do you want to be the final value: \n";
+            std::cin >> finish;
+            count=start;
+            while (count <=finish) {
+                std::cout << "<audio type=\"audio/webm\" src=\"" << count << ".webm\"></audio>\n";
+                count++;
             }
         }
         else if (strcmp(element,"webp")==0) {
