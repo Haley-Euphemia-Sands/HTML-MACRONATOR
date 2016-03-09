@@ -25,7 +25,7 @@
 /* Begin PBXFileReference section */
 		A803AC271C42962A00B563CB /* HTML MACRONATOR */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "HTML MACRONATOR"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A803AC2A1C42962A00B563CB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		A8A55CC41C7AE1F6009939D6 /* h.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = h.h; path = ../h.h; sourceTree = "<group>"; };
+		A8D300871C8FF87400079F31 /* h.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = h.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 		A803AC291C42962A00B563CB /* HTML MACRONATOR */ = {
 			isa = PBXGroup;
 			children = (
-				A8A55CC41C7AE1F6009939D6 /* h.h */,
+				A8D300871C8FF87400079F31 /* h.h */,
 				A803AC2A1C42962A00B563CB /* main.cpp */,
 			);
 			path = "HTML MACRONATOR";
