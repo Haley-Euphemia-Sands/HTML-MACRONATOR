@@ -7,14 +7,36 @@
 
 #include <iostream>
 #include <cstring>
+#include "h.h"
 
-int main(int argc, const char * argv[]) {
+int main(int argc, const char * argv[]){
     char element[20];
     char type[20];
     char extraatr[50];
     char imgext[20];
     char fin[1];
     int start, finish, count, status[2];
+    if (argc >=2) {
+        count=2;
+        while (count <= argc) {
+            int truco;
+            truco=count-1;
+            count ++;
+            if (strcmp(argv[truco],"-h")==0) {
+                help();
+            }
+            else if (strcmp(argv[truco],"-x")==0) {
+                xmlm();
+            }
+            else  {
+                std::cout << "No such argument!";
+                count=argc+1;
+            }
+        }
+        status[0]=0;
+        status[1]=0;
+    }
+    else {
     status[1] = 1;
     while (status[1] == 1) {
         std::cout << "Please enter element you want to generate or enter \"exit\": \n";
@@ -168,5 +190,6 @@ int main(int argc, const char * argv[]) {
         }
     }
     std::cout << "Shutting Down!\n";
+    }
     return 0;
 }
